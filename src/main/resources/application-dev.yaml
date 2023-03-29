@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: 'jdbc:postgresql://192.168.31.88:5432/postgres?verifyServerCertificate'
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    hidden-method:
+      filter:
+        enabled: true
+server:
+  port: '8088'

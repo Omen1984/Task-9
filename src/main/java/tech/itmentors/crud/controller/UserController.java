@@ -41,10 +41,7 @@ public class UserController {
     @GetMapping("user/update-page/{id}")
     public String updateUserPage(ModelMap model, @PathVariable("id") long id) {
         User user = userService.findById(id);
-        if (user != null) {
-            model.addAttribute("user", user);
-        }
-
+        model.addAttribute("user", user);
         return "user-update";
     }
 
@@ -54,13 +51,11 @@ public class UserController {
         return "redirect:/";
     }
 
-    @DeleteMapping ("user/delete/{id}")
+    @DeleteMapping("user/delete/{id}")
     public String delete(@PathVariable long id) {
         userService.deleteById(id);
         return "redirect:/";
     }
-
-
 
 
 }
